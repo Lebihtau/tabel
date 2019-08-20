@@ -1,17 +1,64 @@
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
+//Edit 'key' and 'columns' to connect your spreadsheet
+
+//enter google sheets key here
+var key =
+  "https://docs.google.com/spreadsheets/d/15JtSCWo1E9YzyQN5U_XZXH4SuDjj9ly0-qk6Jj1A89w/pubhtml?gid=0&single=true";
+
+//"data" refers to the column name with no spaces and no capitals
+//punctuation or numbers in your column name
+//"title" is the column name you want to appear in the published table
+var columns = [{
+  "data": "name",
+  "title": "APP NAME"
+}, {
+  "data": "category",
+  "title": "Category"
+}, 
+   {
+  "data": "os",
+  "title": "OS"
+},
+   {
+  "data": "size",
+  "title": "SIZE"
+}];
+
+$(document).ready(function() {
+
+  function initializeTabletopObject() {
+    Tabletop.init({
+      key: key,
+      callback: function(data, tabletop) {
+        writeTable(data); //call up datatables function
+      },
+      simpleSheet: true,
+      debug: false
+    });
   }
-}
+
+  initializeTabletopObject();
+
+  function writeTable(data) {
+    //select main div and put a table there
+    //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
+    $('#graphic').html(
+      '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-condensed table-responsive" id="mySelection"></table>'
+    );
+
+    //initialize the DataTable object and put settings in
+    $("#mySelection").DataTable({
+      "autoWidth": false,
+      "data": data,
+      "columns": columns,
+      "order": [
+        [2, "desc"]
+      ], //order on second column
+      "pagingType": "simple" //no page numbers
+        //uncomment these options to simplify your table
+        //"paging": false,
+        //"searching": false,
+        //"info": false
+    });
+  }
+});
+//end of writeTable
