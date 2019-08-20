@@ -2,20 +2,23 @@
 
 //enter google sheets key here
 var key =
-  "https://docs.google.com/spreadsheets/d/1z9u37-odmPzC8wdYNL9hCV1QW1fyVhZ2wBgJ7oQGfQc/edit?usp=sharing";
+  "https://docs.google.com/spreadsheets/d/15JtSCWo1E9YzyQN5U_XZXH4SuDjj9ly0-qk6Jj1A89w/pubhtml?gid=0&single=true";
 
 //"data" refers to the column name with no spaces and no capitals
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
 var columns = [{
   "data": "name",
-  "title": "NAME APP"
+  "title": "AppName"
 }, {
   "data": "category",
-  "title": "CATEGORY APP"
-}, {
+  "title": "Category"
+},{
   "data": "os",
   "title": "OS"
+}, {
+  "data": "size",
+  "title": "Size"
 }];
 
 $(document).ready(function() {
