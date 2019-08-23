@@ -55,7 +55,7 @@
         if (typeof options.proxy !== "undefined") {
             this.endpoint = options.proxy.replace(/\/$/, "");
             this.simple_url = false;
-            this.singleton = true;
+            this.singleton = false;
             supportsCORS = false
         }
         this.parameterize = options.parameterize || false;
