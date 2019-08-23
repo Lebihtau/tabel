@@ -8,7 +8,7 @@ var key =
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
 var columns = [{
-  "hyperlink": "name",
+  "data": "name",
   "title": "APP NAME"
 }, {
   "data": "category",
@@ -32,7 +32,7 @@ $(document).ready(function() {
         writeTable(data); //call up datatables function
       },
       simpleSheet: true,
-      debug: false
+      debug: true
     });
   }
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
     //initialize the DataTable object and put settings in
     $("#mySelection").DataTable({
       "autoWidth": false,
-      "data": data,
+      "data": data,hyperlink
       "columns": columns,
       "order": [
         [2, "desc"]
