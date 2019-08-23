@@ -54,7 +54,7 @@
         this.prettyColumnNames = typeof options.prettyColumnNames == "undefined" ? !options.proxy : options.prettyColumnNames;
         if (typeof options.proxy !== "undefined") {
             this.endpoint = options.proxy.replace(/\/$/, "");
-            this.simple_url = true;
+            this.simple_url = false;
             this.singleton = true;
             supportsCORS = false
         }
