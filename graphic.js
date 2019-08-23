@@ -8,7 +8,7 @@ var key =
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
 var columns = [{
-  "data": "name",type:"text"
+  "data": "name",
   "title": "APP NAME"
 }, {
   "data": "category",
@@ -32,7 +32,7 @@ $(document).ready(function() {
         writeTable(data); //call up datatables function
       },
       simpleSheet: true,
-      debug: true
+      debug: false
     });
   }
 
