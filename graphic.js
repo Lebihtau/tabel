@@ -48,7 +48,7 @@ $(document).ready(function() {
     //initialize the DataTable object and put settings in
     $("#mySelection").DataTable({
       "autoWidth": false,
-      "data": data,
+      "data": data, type, row, meta,
       "columns": columns,
       "order": [
         [2, "desc"]
