@@ -27,9 +27,10 @@ function createTableColumns(){
 
     var tableColumns =   [
 		{"mDataProp": "name", "sTitle": "APP NAME", "sClass": "center"},
-		{"mDataProp": "category", "sTitle": "CATEGORY", "sClass": "center"},
-		{"mDataProp": "os", "sTitle": "OS", "sClass": "center"},
+		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"},
+		{"mDataProp": "download", "sTitle": "Download", "sClass": "center"},
 		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"}
+		{"mDataProp": "category", "sTitle": "CATEGORY", "sClass": "center"}
 	];
     return tableColumns;
 }
@@ -46,7 +47,7 @@ function writeTableWith(dataSource){
         "aoColumns": createTableColumns(),
         "fnRowCallback": function(nRow, aData, iDisplayIndex) {
             console.log(aData);
-            $("td:eq(2)", nRow).("<a href='http://'");
+            $("td:eq(2)", nRow).html("<b><a href='http://" + aData.download + "'>DOWNLOAD</a></b>");
             return nRow;
         },
         "oLanguage": {
