@@ -44,7 +44,11 @@ function writeTableWith(dataSource){
         "iDisplayLength": 25,
         "aaData": dataSource,
         "aoColumns": createTableColumns(),
-        "fnRowCallback": function(nRow, aData, iDisplayIndex) 
+        "fnRowCallback": function(nRow, aData, iDisplayIndex) {
+            console.log(aData);
+            $("td:eq(2)", nRow).html("<a href='http://" + aData.name + "'></a>");
+            return nRow;
+        },
         "oLanguage": {
             "sLengthMenu": "_MENU_ records per page"
         }
