@@ -4,6 +4,7 @@ var jqueryNoConflict = jQuery;
 jqueryNoConflict(document).ready(function(){
 
     initializeTabletopObject("https://docs.google.com/spreadsheets/d/15JtSCWo1E9YzyQN5U_XZXH4SuDjj9ly0-qk6Jj1A89w/pubhtml");
+	
 
 });
 
@@ -29,7 +30,7 @@ function createTableColumns(){
 		{"mDataProp": "name", "sTitle": "APP NAME", "sClass": "center"},
 		{"mDataProp": "category", "sTitle": "category", "sClass": "center"},
 		{"mDataProp": "download", "sTitle": "Download", "sClass": "center"},
-		{"mDataProp": "os", "sTitle": "OS", "sClass": "center"}
+		{"mDataProp": "os", "sTitle": "OS", "sClass": "center"},
 		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"}
 	];
     return tableColumns;
