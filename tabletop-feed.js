@@ -26,7 +26,7 @@ function createTableColumns(){
     is what happens with the More Info column header */
 
     var tableColumns =   [
-		{"mDataProp": "nama", "sTitle": "APP NAME", "sClass": "center"},
+		{"mDataProp": "name", "sTitle": "APP NAME", "sClass": "center"},
 		{"mDataProp": "category", "sTitle": "CATEGORY", "sClass": "center"},
 		{"mDataProp": "os", "sTitle": "OS", "sClass": "center"},
 		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"}
