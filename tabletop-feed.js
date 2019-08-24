@@ -27,10 +27,10 @@ function createTableColumns(){
 
     var tableColumns =   [
 		{"mDataProp": "name", "sTitle": "APP NAME", "sClass": "center"},
-		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"},
+		{"mDataProp": "category", "sTitle": "CATEGORY", "sClass": "center"},
 		{"mDataProp": "download", "sTitle": "Download", "sClass": "center"},
+		{"mDataProp": "os", "sTitle": "OS", "sClass": "center"}
 		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"}
-		{"mDataProp": "category", "sTitle": "CATEGORY", "sClass": "center"}
 	];
     return tableColumns;
 }
