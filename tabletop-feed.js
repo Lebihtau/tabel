@@ -48,7 +48,7 @@ function writeTableWith(dataSource){
         "aoColumns": createTableColumns(),
         "fnRowCallback": function(nRow, aData, iDisplayIndex) {
             console.log(aData);
-            $("td:eq(2)", nRow).html("<a href='" + aData.name + "'></a>");
+            $("td:eq(2)", nRow).html("<a href='http://" + aData.download + "'>"aData.download"</a>");
             return nRow;
         },
         "oLanguage": {
