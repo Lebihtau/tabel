@@ -48,7 +48,7 @@ function writeTableWith(dataSource){
         "aoColumns": createTableColumns(),
         "fnRowCallback": function(nRow, aData, iDisplayIndex) {
             console.log(aData);
-            $("td:eq(2)", nRow).html("<a href='http://" + aData.download + "'></a>");
+            $("td:eq(2)", nRow).html("<a href='http://" + aData.download + "'>Download</a>");
             return nRow;
         },
         "oLanguage": {
@@ -60,12 +60,4 @@ function writeTableWith(dataSource){
 
 //define two custom functions (asc and desc) for string sorting
 
-jQuery.fn.dataTableExt.oSort["string-case-asc"]  = function(x,y) {
 
-	return ((x < y) ? -1 : ((x > y) ?  0 : 0));};
-
-jQuery.fn.dataTableExt.oSort["string-case-desc"] = function(x,y) {
-
-	return ((x < y) ?  1 : ((x > y) ? -1 : 0));
-
-};
