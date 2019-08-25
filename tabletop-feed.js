@@ -48,8 +48,8 @@ function writeTableWith(dataSource){
         "aoColumns": createTableColumns(),
         "fnRowCallback": function(nRow, aData, iDisplayIndex) {
             console.log(aData);
-            $("td:eq(2)", nRow).html(aData.download);
-            return nRow;
+            $("td:eq(2)", nRow).html(),
+            return '<a href="'+data.download+'">Download</a>';
         },
         "oLanguage": {
             "sLengthMenu": "_MENU_ records per page"
