@@ -29,7 +29,7 @@ function createTableColumns(){
 
     var tableColumns =   [
 		{"mDataProp": "name", "sTitle": "APP NAME", "sClass": "left"},
-		{"mDataProp": "category", "sTitle": "category", "sClass": "center"},
+		{"mDataProp": "category", "sTitle": "Category", "sClass": "center"},
 		{"mDataProp": "download", "sTitle": "Download", "sClass": "center"},
 		{"mDataProp": "os", "sTitle": "OS", "sClass": "center"},
 		{"mDataProp": "size", "sTitle": "SIZE", "sClass": "center"}
